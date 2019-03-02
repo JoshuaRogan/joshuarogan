@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -34,6 +34,43 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
+          <section style={{ textAlign: "center" }}>
+            <div className="image" />
+            <h1>Hello World!</h1>
+            <p>
+              I am currently working as a full stack software engineer at Fandom
+              in San Francisco. At Fandom, I help support our massive platform
+              of over 200 million unique visitors covering 400K fan powered
+              communities. I serve as the technical lead for the next-generation
+              contribution platform.{" "}
+            </p>
+            <p>
+              You can reach me at{" "}
+              <a href="mailto:JoshJRogan@gmail.com">JoshJRogan@gmail.com</a>
+            </p>
+
+            <section className="nav">
+              {/*<Link to='/about'>About</Link>*/}
+              <a
+                href="https://drive.google.com/file/d/1uWDOIMp7PmTAG_Dcf5yjro0WkzU2N2Fw/view?usp=sharing"
+                target="_blank"
+              >
+                Resume
+              </a>
+              <a
+                href="https://www.linkedin.com/in/joshuarogan/"
+                target="_blank"
+              >
+                {" "}
+                Linkedin
+              </a>
+              <a href="https://github.com/JoshuaRogan" target="_blank">
+                {" "}
+                Github
+              </a>
+            </section>
+          </section>
+
           <main>{children}</main>
           <footer>
             © {new Date().getFullYear()}, Built with

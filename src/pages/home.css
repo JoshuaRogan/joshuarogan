@@ -1,0 +1,42 @@
+a, a:visited, a:active {
+    font-weight: bold;
+    text-decoration: none;
+    color: #118eaa;
+}
+
+section.job h3 {
+    margin-bottom: 8px;
+    padding-bottom: 0;
+}
+
+section.job h4 {
+    font-style: italic;
+    margin-top: 0;
+}
+
+section.nav {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 1.45rem;
+}
+
+
+.image {
+    background: url(https://i.imgur.com/cGFtvF2.jpg);
+    height: 20vw;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-position: right top;
+    border-radius: 20vw;
+    background-repeat: no-repeat;
+    border: 3px solid #2c3e50;
+    margin-bottom: 15px;
+}
+
+h2 {
+    padding-bottom: 8px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.82);
+}
