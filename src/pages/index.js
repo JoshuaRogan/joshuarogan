@@ -47,7 +47,7 @@ const IndexPage = () => (
           <h4>Links</h4>
           <ul>
             <li>
-              <a href="https://makingit.fandom.com/wiki/4198489/crafts">
+              <a href="https://makingit.fandom.com/wiki/4198323/meet-your-makers">
                 Fandom's next generation platform
               </a>
             </li>
