@@ -69,7 +69,8 @@ const IndexPage = () => (
         <p>I find myself more and more frustrated in my search for fair news. The internet lends itself to creating "click-bait" like article titles which isn't great in the search for truth. I started creating a tool that can detect the political leaning of individual articles through natural language processing techniques. Currently, I am attempting to first analyze text and <a
           href="https://github.com/JoshuaRogan/lrc-articles/blob/master/scrapper/learning/sentiment_analyzer.py">determine the publisher</a> by computing term frequency–inverse document frequency among other things. Next, I would like to investigate sentiment analysis of images. I believe each news outlet choose less flattering images of their "opponent" and I'm curious if the data bears that out. </p>
         <p>I also discovered there is an API that attempts to do this: <a href="https://www.allsides.com/media-bias/media-bias-ratings" target="_blank">AllSides</a>. I find their ratings quite fair and will use that as a sample set to compare my results. </p>
-      <p>Some of the code lives in this <a href="https://github.com/JoshuaRogan/lrc-articles/tree/master/scrapper">repo</a></p>
+        <p>Some of the code lives in this <a href="https://github.com/JoshuaRogan/lrc-articles/tree/master/scrapper">repo</a></p>
+        <p>There is a small front end app I'm using to collect data: <a href="https://lrc.netlify.com/">Left-Right-Center Data Collection</a>. If you find an article very biased youc an copy/paste the link and rate it. </p>
       </section>
     </section>
   </Layout>
