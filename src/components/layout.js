@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <section style={{ textAlign: "center" }}>
+          <nav style={{ textAlign: "center" }}>
             <div className="image" />
             <h1>Hello World!</h1>
             <p>
@@ -55,7 +55,7 @@ const Layout = ({ children }) => (
                 href="https://drive.google.com/file/d/1uWDOIMp7PmTAG_Dcf5yjro0WkzU2N2Fw/view?usp=sharing"
                 target="_blank"
               >
-                Resume
+                Résumé
               </a>
               <a
                 href="https://www.linkedin.com/in/joshuarogan/"
@@ -68,10 +68,14 @@ const Layout = ({ children }) => (
                 {" "}
                 Github
               </a>
+              <a href="https://goo.gl/photos/cxYAM6NLKC78Upky5" target="_blank">
+                Photography
+              </a>
             </section>
-          </section>
+          </nav>
 
           <main>{children}</main>
+
           <footer>
             © {new Date().getFullYear()}, Built with
             {` `}

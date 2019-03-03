@@ -21,7 +21,7 @@ const IndexPage = () => (
         <ul>
           <li>
             Develop front-end apps and back-end microservices at scale to serve
-            our 200M uniques
+            our 200MM uniques
           </li>
           <li>
             Technical lead for Fandom’s next-generation contribution platform
@@ -202,7 +202,7 @@ const IndexPage = () => (
         <li>
           Data Engineering
           <ul>
-            <li>Sklearn, tensorflow, pandas</li>
+            <li>Sklearn, tensorflow, pandas, AWs Glue</li>
           </ul>
         </li>
       </ul>
