@@ -24,7 +24,7 @@ const JobList = () => (
           </li>
           <li>Work closely with product to align goals</li>
           <li>
-            Lead technical code sharing groups for new technology and patterns
+            Lead technical code sharing groups for new technology and programming patterns
           </li>
           <li>
             Rolled out WordPress as a Service (Laravel+Webpack+WP) for a
