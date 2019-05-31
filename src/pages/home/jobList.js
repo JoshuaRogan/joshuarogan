@@ -7,7 +7,7 @@ const JobList = () => (
       <section className="job">
         <h3>
           <a href="https://www.fandom.com/about">Fandom</a> | Full Stack
-          Software Engineer (Tech Lead)
+          Software Engineer (Team Lead)
         </h3>
         <h4>July 2016 - Present</h4>
         <ul>
