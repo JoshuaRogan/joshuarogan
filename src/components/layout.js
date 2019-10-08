@@ -38,11 +38,10 @@ const Layout = ({ children }) => (
             <div className="image" />
             <h1>Hello World!</h1>
             <p>
-              I am currently working as a full stack software engineer at Fandom
-              in San Francisco. At Fandom, I help support our massive platform
-              of over 200 million unique visitors covering 400K fan powered
-              communities. I serve as the technical lead for the next-generation
-              contribution platform.{" "}
+              I am currently working as a team lead on an engineering team at
+              Fandom in San Francisco. At Fandom, I help support our massive
+              platform of over 200 million unique visitors covering 400K fan
+              powered communities.
             </p>
             <p>
               You can reach me at{" "}
