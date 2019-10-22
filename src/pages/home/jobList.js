@@ -12,15 +12,20 @@ const JobList = () => (
         <h4>July 2016 - Present</h4>
         <ul>
           <li>
-            Develop front-end apps and back-end microservices at scale to serve
+            Lead projects for front-end apps and back-end microservices at scale to serve
             our 200MM uniques
+          </li>
+          <li> 
+            Data driven management
+          </li>
+          <li> 
+            Actively seek and hire globally-distributed talent
           </li>
           <li>
             Technical lead for Fandom’s next-generation contribution platform
           </li>
           <li>
-            Mentor junior engineers from{" "}
-            <a href="https://thelastmile.org/">Last Mile</a>
+            Mentor engineers from <a href="https://thelastmile.org/">The Last Mile Program</a>
           </li>
           <li>Work closely with product to align goals</li>
           <li>
@@ -30,9 +35,11 @@ const JobList = () => (
             Rolled out WordPress as a Service (Laravel+Webpack+WP) for a
             fast-to-market editorial solution
           </li>
-          <li>with international teams</li>
           <li>
-            Make decisions based on data and run A/B tests to validate ideas
+            Work closely with international teams
+           </li>
+          <li>
+            Data driven development executing A/B tests to validate ideas
           </li>
         </ul>
         <section>
