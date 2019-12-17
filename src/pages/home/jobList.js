@@ -12,13 +12,13 @@ const JobList = () => (
         <h4>July 2016 - Present</h4>
         <ul>
           <li>
-            Lead projects for front-end apps and back-end microservices at scale to serve
+            Lead projects for front-end apps, database systems, and back-end microservices at scale to serve
             our 200MM uniques
           </li>
-          <li> 
+          <li>
             Data driven management
           </li>
-          <li> 
+          <li>
             Actively seek and hire globally-distributed talent
           </li>
           <li>

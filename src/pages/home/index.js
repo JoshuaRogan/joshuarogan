@@ -60,8 +60,11 @@ const IndexPage = () => (
           <p>I've been looking for a project to utilized machine learning techniques and this dataset was begging to be analyzed. </p>
           <p>I had used some basic machine learning tools in the past such as linear support vector machines, and k-nearest neighbor's. But I really want to try to our neural networks. My initial findings indicated that LSVM outperformed neural networks in speed and accuracy. I'm skeptical of these results and wonder if I have a flaw in the setup of my neural network</p>
           <p>I started building a UI that allows the user to position a pitch in a virtual strike zone, give it velocity, breaking, and angle variables and the app will determine the likelihood of a hit. </p>
-          <p>I wish I had this in an organized state but they exist in these repos: <a
-            href="https://github.com/JoshuaRogan/mlb-pitch-app">MLB Pitch App</a> and <a href="https://github.com/mlb-ranking">MLB Stats 2</a></p>
+          <ul>
+            <li> <a href="https://github.com/JoshuaRogan/mlb-pitch-app/blob/master/ml/guess_pitch_type.py" target="_blank">Guess Pitch Type (ML - NN)</a></li>
+            <li> <a href="https://github.com/JoshuaRogan/mlb-pitch-app/blob/master/ml/guess_pitch_type_sklearn.py" target="_blank">Guess Pitch Type (ML - Sklearn)</a></li>
+            <li> <a href="https://mlb-ranking.readthedocs.io/en/latest/results/first-draft.html" target="_blank">Jaccard Simliarity of Players</a></li>
+          </ul>
       </section>
 
       <section>
