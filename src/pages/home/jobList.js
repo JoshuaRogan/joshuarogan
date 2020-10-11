@@ -48,7 +48,7 @@ const JobList = () => (
           <h4>Links</h4>
           <ul>
             <li>
-              <a href="https://starwars.fandom.com/wiki/Main_Page" target="_blank">
+              <a href="https://starwars.fandom.com/wiki/Luke_Skywalker" target="_blank">
                 Fandom's MediaWiki Platform
               </a>
             </li>
