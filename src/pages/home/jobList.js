@@ -6,14 +6,16 @@ const JobList = () => (
 
       <section className="job">
         <h3>
-          <a href="https://www.fandom.com/about">Fandom</a> | Full Stack
-          Software Engineer (Team Lead)
+          <a href="https://www.fandom.com/about">Fandom</a> Engineering Manager
         </h3>
         <h4>July 2016 - Present</h4>
         <ul>
           <li>
-            Lead projects for front-end apps, database systems, and back-end microservices at scale to serve
+            Lead projects for front-end applications, database systems, and back-end microservices at scale to serve
             our 200MM uniques
+          </li>
+          <li>
+            Building a data platform team to better utilize out vast amount of content and user data
           </li>
           <li>
             Data driven management
@@ -22,7 +24,7 @@ const JobList = () => (
             Actively seek and hire globally-distributed talent
           </li>
           <li>
-            Technical lead for Fandom’s next-generation contribution platform
+            Technical lead for Fandom’s next-generation contribution platform (2017)
           </li>
           <li>
             Mentor engineers from <a href="https://thelastmile.org/">The Last Mile Program</a>
@@ -45,6 +47,11 @@ const JobList = () => (
         <section>
           <h4>Links</h4>
           <ul>
+            <li>
+              <a href="https://starwars.fandom.com/wiki/Main_Page" target="_blank">
+                Fandom's MediaWiki Platform
+              </a>
+            </li>
             <li>
               <a href="https://makingit.fandom.com/wiki/4198323/meet-your-makers">
                 Fandom's next generation platform
