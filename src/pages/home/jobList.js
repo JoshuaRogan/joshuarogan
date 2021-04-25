@@ -12,7 +12,7 @@ const JobList = () => (
         <ul>
           <li>
             Lead projects for front-end applications, database systems, and back-end microservices at scale to serve
-            our 200MM uniques
+            our 300MM uniques
           </li>
           <li>
             Building a data platform team to better utilize out vast amount of content and user data
@@ -41,7 +41,7 @@ const JobList = () => (
             Work closely with international teams
            </li>
           <li>
-            Data driven development executing A/B tests to validate ideas
+            Data driven development executing A/B tests to validate hypotheses
           </li>
         </ul>
         <section>
@@ -134,7 +134,7 @@ const JobList = () => (
         <h3>Pittsburgh Genetics | Full Stack Software Engineer</h3>
         <h4>October 2014 – January 2016</h4>
         <ul>
-          <li>Built a genetic population simulator web application</li>
+          <li>Built a genetic population simulator web application used by students and professors across the US </li>
           <li>
             Utilized multi-threading web workers to speed up simultaneous
             simulations
@@ -154,7 +154,7 @@ const JobList = () => (
 
       <section className="job">
         <h3>Independent Consultant | Full Stack Software Engineer</h3>
-        <h4>January 2012 – Present</h4>
+        <h4>January 2010 – Present</h4>
         <ul>
           <li>
             Worked with professional baseball teams, writers, students, and

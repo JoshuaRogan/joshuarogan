@@ -14,7 +14,7 @@ const IndexPage = () => (
       <h2>Skill Sets</h2>
       <ul>
         <li>
-          Front-End
+          Front-End (JavaScript)
           <ul>
             <li>React, redux, wepback, styled components</li>
           </ul>
@@ -37,13 +37,13 @@ const IndexPage = () => (
         <li>
           Ops
           <ul>
-            <li>Kubernetes, VCL, AWS</li>
+            <li>Kubernetes, VCL, AWS & GCS</li>
           </ul>
         </li>
         <li>
           Data Engineering
           <ul>
-            <li>Sklearn, tensorflow, pandas, AWs Glue</li>
+            <li>Sklearn, tensorflow, pandas, AWS Glue</li>
           </ul>
         </li>
       </ul>

@@ -38,9 +38,9 @@ const Layout = ({ children }) => (
             <div className="image" />
             <h1>Hello World!</h1>
             <p>
-              I am currently working as a team lead on an engineering team at
+              I am currently working as an engineering manager at
               Fandom in San Francisco. At Fandom, I help support our massive
-              platform of over 200 million unique visitors covering 400K fan
+              platform of over 300 million monthly unique visitors covering 400K fan
               powered communities.
             </p>
             <p>
@@ -51,7 +51,7 @@ const Layout = ({ children }) => (
             <section className="nav">
               {/*<Link to='/about'>About</Link>*/}
               <a
-                href="https://drive.google.com/file/d/1uWDOIMp7PmTAG_Dcf5yjro0WkzU2N2Fw/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ml4-IAluAihgNSt1nZtTOMWOE1tStqMM/view"
                 target="_blank"
               >
                 Résumé
