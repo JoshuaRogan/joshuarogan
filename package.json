@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "joshuarogan-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Gatsby built blog for Josh Rogan",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Josh Rogan <jjjr1122@gmail.com>",
   "dependencies": {
     "gatsby": "^3.14.0",
     "gatsby-image": "^3.11.0",
@@ -35,9 +35,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/JoshuaRogan/joshuarogan"
   }
 }
