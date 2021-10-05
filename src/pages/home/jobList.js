@@ -6,44 +6,36 @@ const JobList = () => (
 
       <section className="job">
         <h3>
-          <a href="https://www.fandom.com/about">Fandom</a> Engineering Manager
+          <a href="https://www.fandom.com/about">Fandom</a>
         </h3>
         <h4>July 2016 - Present</h4>
+        <h4>Engineering Manager</h4>
         <ul>
           <li>
-            Lead projects for front-end applications, database systems, and back-end microservices at scale to serve
-            our 300MM uniques
+            Lead projects for front-end applications, data systems, and back-end microservices to our 300M monthly
+            unique visitors across multiple engineering groups
           </li>
           <li>
-            Building a data platform team to better utilize out vast amount of content and user data
+            Mentor top engineers into leadership roles
           </li>
           <li>
-            Data driven management
+            Product partner to align goals building out the correct technologies to support the business
           </li>
           <li>
-            Actively seek and hire globally-distributed talent
-          </li>
-          <li>
-            Technical lead for Fandom’s next-generation contribution platform (2017)
-          </li>
-          <li>
-            Mentor engineers from <a href="https://thelastmile.org/">The Last Mile Program</a>
-          </li>
-          <li>Work closely with product to align goals</li>
-          <li>
-            Lead technical code sharing groups for new technology and programming patterns
-          </li>
-          <li>
-            Rolled out WordPress as a Service (Laravel+Webpack+WP) for a
-            fast-to-market editorial solution
-          </li>
-          <li>
-            Work closely with international teams
-           </li>
-          <li>
-            Data driven development executing A/B tests to validate hypotheses
+           Hire global talent across multiple departments
           </li>
         </ul>
+
+        <h4>Staff Engineer</h4>
+        <ul>
+          <li>Technical lead for an experimentation platform (primarily a/b testing)</li>
+          <li>Technical lead for a client-side data management toolkit enabling better personalization</li>
+          <li>Technical lead for Fandom’s next-generation contribution platform</li>
+          <li>Led technical code sharing groups for new technology and engineering patterns</li>
+          <li>Technical lead for an internally-built fast-to-market editorial platform</li>
+          <li>Work closely with international engineering partners</li>
+        </ul>
+
         <section>
           <h4>Links</h4>
           <ul>
@@ -68,10 +60,8 @@ const JobList = () => (
         <h3>Fireman Creative | Full Stack Software Engineer</h3>
         <h4>July 2015 - July 2016</h4>
         <ul>
-          <li>Independently led several web projects end-to-end</li>
-          <li>
-            Collaborated with clients and graphic designers to craft a
-            consistent look and feel of web applications
+          <li>Independently led several completed web projects from design to production </li>
+          <li>Collaborated with clients and graphic designers to craft a consistent look and feel of web applications
           </li>
           <li>
             Generated monthly SEO and analytical progress reports to track
@@ -109,8 +99,7 @@ const JobList = () => (
         <h4>January 2015 – January 2016</h4>
         <ul>
           <li>
-            Built python-powered front-end application to display the largest
-            molecule database
+            Built python-powered front-end application to display the largest molecule database
           </li>
           <li>
             Utilized WebGL technology to create 3D visualizations of molecules
@@ -134,7 +123,12 @@ const JobList = () => (
         <h3>Pittsburgh Genetics | Full Stack Software Engineer</h3>
         <h4>October 2014 – January 2016</h4>
         <ul>
-          <li>Built a genetic population simulator web application used by students and professors across the US </li>
+          <li>Built a genetic population simulator web application used by students and professors across the US
+            <ul>
+              <li>Teaching tool used across multiple universities</li>
+              <li>Utilized multithreading web workers to speed up simultaneous math calculations</li>
+            </ul>
+          </li>
           <li>
             Utilized multi-threading web workers to speed up simultaneous
             simulations
@@ -144,7 +138,7 @@ const JobList = () => (
           <h4>Links</h4>
           <ul>
             <li>
-              <a href="http://popgensimulator.pitt.edu/graphs/allele">
+              <a href="https://eloquent-williams-76e898.netlify.app/">
                 Simulator
               </a>
             </li>
@@ -156,9 +150,18 @@ const JobList = () => (
         <h3>Independent Consultant | Full Stack Software Engineer</h3>
         <h4>January 2010 – Present</h4>
         <ul>
-          <li>
-            Worked with professional baseball teams, writers, students, and
-            professors to build web applications
+          <li> Worked with professional baseball teams, writers, students, and professors to build web applications
+            <ul>
+              <li>Built a CMS for San Francisco Giants affiliate team player management</li>
+              <li>Built tools to automate audio uploads for a blogger</li>
+            </ul>
+          </li>
+
+          <li> Advised faculty and staff at the University of Scranton as a Technical Consultant
+            <ul>
+              <li>Migrated years of content from custom websites to a CMS</li>
+              <li>Created a proposal for which Learning Management System the University should use</li>
+            </ul>
           </li>
         </ul>
         <section>

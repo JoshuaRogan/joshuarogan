@@ -40,3 +40,7 @@ h2 {
     padding-bottom: 8px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.82);
 }
+
+table td:first-child {
+    font-weight: bold;
+}

@@ -1,4 +1,5 @@
 import React from "react"
+import styled from 'styled-components';
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -12,41 +13,37 @@ const IndexPage = () => (
 
     <section>
       <h2>Skill Sets</h2>
-      <ul>
-        <li>
-          Front-End (JavaScript)
-          <ul>
-            <li>React, redux, wepback, styled components</li>
-          </ul>
-        </li>
-        <li>
-          Back-End
-          <ul>
-            <li>
-              Java (gradle, guice, jackson, jersey, jooq, liquibase), Python,
-              PHP (Laravel, Composer, WP), Node.js
-            </li>
-          </ul>
-        </li>
-        <li>
-          Database
-          <ul>
-            <li>MySQL, MongoDB</li>
-          </ul>
-        </li>
-        <li>
-          Ops
-          <ul>
-            <li>Kubernetes, VCL, AWS & GCS</li>
-          </ul>
-        </li>
-        <li>
-          Data Engineering
-          <ul>
-            <li>Sklearn, tensorflow, pandas, AWS Glue</li>
-          </ul>
-        </li>
-      </ul>
+      <table>
+        <tr>
+          <th>Tech</th>
+          <th>Skill Set</th>
+        </tr>
+        <tr>
+          <td> Frontend</td>
+          <td>JavaScript, TypeScript, React, Redux, Webpack, Rollup, Immutable, Styled Components, Yarn, IndexedDB, LocalStorage, and WebWorkers</td>
+        </tr>
+        <tr>
+          <td>Backend</td>
+          <td>Java (Gradle, Guice, Jackson, Jersey, Jooq, Liquibase), Python, PHP (Laravel, Composer, WP), and Node.js</td>
+        </tr>
+        <tr>
+          <td>Analytics</td>
+          <td>Google Analytics, Mode, and Internal Data Warehouse</td>
+        </tr>
+          <tr>
+          <td>Database</td>
+          <td>MySQL, MongoDB, and Athena</td>
+        </tr>
+          <tr>
+          <td>Ops</td>
+          <td>Kubernetes, AWS, GCS, and Varnish Control Language (CDN language), Jenkins</td>
+        </tr>
+          <tr>
+          <td>Data Engineering</td>
+          <td>SKLearn, Tensorflow, Pandas, and Jupyter Notebook</td>
+        </tr>
+      </table>
+
     </section>
 
     <section>

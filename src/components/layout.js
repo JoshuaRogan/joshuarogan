@@ -23,7 +23,7 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
@@ -38,10 +38,10 @@ const Layout = ({ children }) => (
             <div className="image" />
             <h1>Hello World!</h1>
             <p>
-              I am currently working as an engineering manager at
-              Fandom in San Francisco. At Fandom, I help support our massive
-              platform of over 300 million monthly unique visitors covering 400K fan
-              powered communities.
+              I am currently working as an engineering manager at Fandom in San
+              Francisco. At Fandom, I help support our massive platform of over
+              300 million monthly unique visitors covering 400K fan powered
+              communities.
             </p>
             <p>
               You can reach me at{" "}
