@@ -36,7 +36,7 @@ const IndexPage = () => (
         </tr>
           <tr>
           <td>Ops</td>
-          <td>Kubernetes, AWS, GCS, and Varnish Control Language (CDN language), Jenkins</td>
+          <td>Kubernetes, AWS, GCS, Varnish Control Language (CDN language), and Jenkins</td>
         </tr>
           <tr>
           <td>Data Engineering</td>
