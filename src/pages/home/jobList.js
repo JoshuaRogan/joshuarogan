@@ -12,14 +12,20 @@ const JobList = () => (
         <h4>Engineering Manager</h4>
         <ul>
           <li>
-            Lead projects for front-end applications, data systems, and back-end microservices to our 300M monthly
-            unique visitors across multiple engineering groups
+            Lead projects for front-end applications, data systems, and back-end microservices to
+            our 300M monthly unique visitors across multiple engineering groups
+          </li>
+          <li>
+            Managed three engineering groups focused on findability, video, and experimentation
           </li>
           <li>
             Mentor top engineers into leadership roles
           </li>
           <li>
-            Product partner to align goals building out the correct technologies to support the business
+            Partnered with product leaders to align goals while building out the correct technologies to support the business
+          </li>
+          <li>
+            Executed a strategy to unify the front-end-platform with consistent tooling and technology
           </li>
           <li>
            Hire global talent across multiple departments
@@ -28,9 +34,11 @@ const JobList = () => (
 
         <h4>Staff Engineer</h4>
         <ul>
-          <li>Technical lead for an experimentation platform (primarily a/b testing)</li>
-          <li>Technical lead for a client-side data management toolkit enabling better personalization</li>
-          <li>Technical lead for Fandom’s next-generation contribution platform</li>
+          <li>Technical lead for an experimentation platform, client-side data management toolkit
+            for personalization, video platform, building a fast-to-market editorial platform,
+            and Fandom’s react replacement of MediaWiki
+          </li>
+          <li>Unified client-side performance and analytics systems</li>
           <li>Led technical code sharing groups for new technology and engineering patterns</li>
           <li>Technical lead for an internally-built fast-to-market editorial platform</li>
           <li>Work closely with international engineering partners</li>

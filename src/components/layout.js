@@ -51,7 +51,7 @@ const Layout = ({ children }) => (
             <section className="nav">
               {/*<Link to='/about'>About</Link>*/}
               <a
-                href="https://drive.google.com/file/d/1ml4-IAluAihgNSt1nZtTOMWOE1tStqMM/view"
+                href="https://drive.google.com/file/d/13sR0c1uM0eFyWEo1okzaTx9A83qiTLN2/view"
                 target="_blank"
               >
                 Résumé

@@ -20,15 +20,15 @@ const IndexPage = () => (
         </tr>
         <tr>
           <td> Frontend</td>
-          <td>JavaScript, TypeScript, React, Redux, Webpack, Rollup, Immutable, Styled Components, Yarn, IndexedDB, LocalStorage, and WebWorkers</td>
+          <td>JavaScript, TypeScript, NextJS, React, Redux, Webpack, Rollup, Immutable, Styled Components, Yarn, IndexedDB, LocalStorage, and WebWorkers</td>
         </tr>
         <tr>
           <td>Backend</td>
-          <td>Java (Gradle, Guice, Jackson, Jersey, Jooq, Liquibase), Python, PHP (Laravel, Composer, WP), and Node.js</td>
+          <td>Node.js, Java (Gradle, Guice, Jackson, Jersey, Jooq, Liquibase), Python, and PHP (Laravel, Composer, WP)</td>
         </tr>
         <tr>
           <td>Analytics</td>
-          <td>Google Analytics, Mode, and Internal Data Warehouse</td>
+          <td>Athena, Google Analytics, Mode, and Internal Data Warehouse</td>
         </tr>
           <tr>
           <td>Database</td>
