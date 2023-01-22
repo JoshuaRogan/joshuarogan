@@ -158,6 +158,7 @@ const JobList = () => (
         <h3>Independent Consultant | Full Stack Software Engineer</h3>
         <h4>January 2010 – Present</h4>
         <ul>
+          <li>(2023) Actively working with <a href="https://hhmi.org">Howard Hughes Medical Institute</a> building tools for expanding understanding of genetics</li>
           <li> Worked with professional baseball teams, writers, students, and professors to build web applications
             <ul>
               <li>Built a CMS for San Francisco Giants affiliate team player management</li>
