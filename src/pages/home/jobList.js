@@ -8,57 +8,71 @@ const JobList = () => (
         <h3>
           <a href="https://www.fandom.com/about">Fandom</a>
         </h3>
-        <h4>July 2016 - Present</h4>
-        <h4>Engineering Manager</h4>
+        <h4>July 2016 - 2023</h4>
+        <h4>Engineering Manager (2019-2023)</h4>
         <ul>
           <li>
-            Lead projects for front-end applications, data systems, and back-end microservices to
-            our 300M monthly unique visitors across multiple engineering groups
+            Led complex projects for scalable React front-end applications, data systems, and back-end microservices to our 300M monthly unique visitors across multiple engineering groups.
           </li>
           <li>
-            Managed three engineering groups focused on findability, video, and experimentation
+            Expanded strategy for performance dashboards and observability on our client-side systems.
+          </li>
+          <li>Led a team of 9 engineers focusing on findability, video, and experimentation. Ensured teams were able to deliver high-quality features to meet business objectives rapidly.
           </li>
           <li>
-            Mentor top engineers into leadership roles
+            Partnered with product leaders to align short-term goals while working with the VP of Engineering to build the correct infrastructure to support the business in the long term.
           </li>
           <li>
-            Partnered with product leaders to align goals while building out the correct technologies to support the business
+            Executed a strategy to unify the front-end platform with consistent tooling and technology.
           </li>
           <li>
-            Executed a strategy to unify the front-end-platform with consistent tooling and technology
+            Hired global talent across multiple departments.
           </li>
           <li>
-           Hire global talent across multiple departments
+            Developed top engineers into leadership roles by providing individualized mentorship and guidance tailored to the specific motivations and goals of each engineer.
           </li>
         </ul>
 
-        <h4>Staff Engineer</h4>
+        <h4>Staff Engineer (2016-2019)</h4>
         <ul>
-          <li>Technical lead for an experimentation platform, client-side data management toolkit
-            for personalization, video platform, building a fast-to-market editorial platform,
-            and Fandom’s react replacement of MediaWiki
+          <li>Technical lead for a browser experimentation platform, client-side data management toolkit for personalization, and video platform.
           </li>
-          <li>Unified client-side performance and analytics systems</li>
-          <li>Led technical code sharing groups for new technology and engineering patterns</li>
-          <li>Technical lead for an internally-built fast-to-market editorial platform</li>
-          <li>Work closely with international engineering partners</li>
+          <li>
+            Built a fast-to-market editorial platform and Fandom’s React replacement of MediaWiki.
+          </li>
+          <li>
+            Unified client-side performance and analytics systems.
+          </li>
+          <li>
+            Led technical code-sharing groups for new technology and engineering patterns.
+          </li>
+          <li>
+            Worked closely with international engineering, design, and product partners.
+          </li>
         </ul>
 
         <section>
           <h4>Links</h4>
           <ul>
             <li>
+              <a href="https://www.fandom.com/fancentral/home">(2023) Centralized Fandom Content App</a>
+            </li>
+            <li>
+              <a href="https://www.fandom.com/video">(2022) Canonical Video Platform</a>
+            </li>
+            <li>
+              <a href="https://www.fandom.com/trivia">(2022) Trivia Application</a>
+            </li>
+            <li>
+              <a href="https://bingebot.fandom.com/">(2021) TV Show Recommendation App</a>
+            </li>
+            <li>
+              <a href="https://www.fandom.com/">(2020) Editorial Platform</a>
+            </li>
+            <li>
               <a href="https://starwars.fandom.com/wiki/Luke_Skywalker" target="_blank">
                 Fandom's MediaWiki Platform
               </a>
-            </li>
-            <li>
-              <a href="https://makingit.fandom.com/wiki/4198323/meet-your-makers">
-                Fandom's next generation platform
-              </a>
-            </li>
-            <li>
-              <a href="https://www.fandom.com/">Wordpress as a Service</a>
             </li>
           </ul>
         </section>
@@ -158,7 +172,7 @@ const JobList = () => (
         <h3>Independent Consultant | Full Stack Software Engineer</h3>
         <h4>January 2010 – Present</h4>
         <ul>
-          <li>(2023) Actively working with <a href="https://hhmi.org">Howard Hughes Medical Institute</a> building tools for expanding understanding of genetics</li>
+          <li>(2023) Actively working with Howard Hughes Medical Institute building tools for expanding understanding of genetics</li>
           <li> Worked with professional baseball teams, writers, students, and professors to build web applications
             <ul>
               <li>Built a CMS for San Francisco Giants affiliate team player management</li>
