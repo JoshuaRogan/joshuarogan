@@ -20,27 +20,39 @@ const IndexPage = () => (
         </tr>
         <tr>
           <td> Frontend</td>
-          <td>JavaScript, TypeScript, NextJS, React, Redux, Webpack, Rollup, Immutable, Styled Components, Yarn, IndexedDB, LocalStorage, and WebWorkers</td>
+          <td>JavaScript, TypeScript, React, NextJS, Redux, Webpack, Rollup, Immutable, Styled Components, Yarn, IndexedDB, LocalStorage, streaming video, WebGL, and WebWorkers.</td>
         </tr>
         <tr>
           <td>Backend</td>
-          <td>Node.js, Java (Gradle, Guice, Jackson, Jersey, Jooq, Liquibase), Python, and PHP (Laravel, Composer, WP)</td>
+          <td>Node.js, Java (Gradle, Guice, Jackson, Jersey, Jooq, Liquibase), Python, PHP (Laravel, Composer, WP), RabbitMQ, Memcached, and Algolia.</td>
         </tr>
         <tr>
           <td>Analytics</td>
-          <td>Athena, Google Analytics, Mode, and Internal Data Warehouse</td>
+          <td>Athena, Google Analytics, Mode, and Qlik.</td>
         </tr>
           <tr>
-          <td>Database</td>
-          <td>MySQL, MongoDB, and Athena</td>
+          <td>Data/Database</td>
+          <td>MySQL, MongoDB, GraphQL, and Neo4J.</td>
         </tr>
           <tr>
           <td>Ops</td>
-          <td>Kubernetes, AWS, GCS, Varnish Control Language (CDN language), and Jenkins</td>
+          <td>Kubernetes, AWS, GCP, Jenkins, Travis CI, Kibana, Grafana, Prometheus, and Varnish Control Language.</td>
         </tr>
           <tr>
           <td>Data Engineering</td>
-          <td>SKLearn, Tensorflow, Pandas, and Jupyter Notebook</td>
+          <td>SKLearn, Tensorflow, Pandas, and Jupyter Notebook.</td>
+        </tr>
+        <tr>
+          <td>Design</td>
+          <td>Figma, Zeplin, Sketch, Canva, LucidChart.</td>
+        </tr>
+        <tr>
+          <td>Miscellaneous</td>
+          <td>Agile, Jira, Photoshop, Lightroom, and Premiere Pro.</td>
+        </tr>
+        <tr>
+          <td>Personal Interests</td>
+          <td> Photography, woodworking, boardgames, disc golf, and baseball.</td>
         </tr>
       </table>
 

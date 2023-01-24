@@ -82,20 +82,20 @@ const JobList = () => (
         <h3>Fireman Creative | Full Stack Software Engineer</h3>
         <h4>July 2015 - July 2016</h4>
         <ul>
-          <li>Independently led several completed web projects from design to production </li>
-          <li>Collaborated with clients and graphic designers to craft a consistent look and feel of web applications
+          <li>Independently led several completed web projects from design to production. </li>
+          <li>Collaborated with clients and graphic designers to craft a consistent look and feel of web applications.
           </li>
           <li>
             Generated monthly SEO and analytical progress reports to track
-            progress
+            progress.
           </li>
           <li>
             Created a new container-based deployment process that greatly sped
-            up development flows
+            up development flows.
           </li>
           <li>
             Implemented automated alerts and scripts to restart crashed
-            applications and servers
+            applications and servers.
           </li>
         </ul>
         <section>
@@ -121,12 +121,12 @@ const JobList = () => (
         <h4>January 2015 – January 2016</h4>
         <ul>
           <li>
-            Built python-powered front-end application to display the largest molecule database
+            Built python-powered front-end application to display the largest molecule database.
           </li>
           <li>
-            Utilized WebGL technology to create 3D visualizations of molecules
+            Utilized WebGL technology to create 3D visualizations of molecules.
           </li>
-          <li>Built and maintained a MongoDB server</li>
+          <li>Built and maintained a MongoDB server.</li>
         </ul>
 
         <section>
@@ -145,15 +145,15 @@ const JobList = () => (
         <h3>Pittsburgh Genetics | Full Stack Software Engineer</h3>
         <h4>October 2014 – January 2016</h4>
         <ul>
-          <li>Built a genetic population simulator web application used by students and professors across the US
+          <li>Built a genetic population simulator web application used by students and professors across the US.
             <ul>
-              <li>Teaching tool used across multiple universities</li>
-              <li>Utilized multithreading web workers to speed up simultaneous math calculations</li>
+              <li>Teaching tool used across multiple universities.</li>
+              <li>Utilized multithreading web workers to speed up simultaneous math calculations.</li>
             </ul>
           </li>
           <li>
             Utilized multi-threading web workers to speed up simultaneous
-            simulations
+            simulations.
           </li>
         </ul>
         <section>
@@ -172,18 +172,18 @@ const JobList = () => (
         <h3>Independent Consultant | Full Stack Software Engineer</h3>
         <h4>January 2010 – Present</h4>
         <ul>
-          <li>(2023) Actively working with Howard Hughes Medical Institute building tools for expanding understanding of genetics</li>
-          <li> Worked with professional baseball teams, writers, students, and professors to build web applications
+          <li>(2023) Actively working with Howard Hughes Medical Institute building tools for expanding understanding of genetics.</li>
+          <li> Worked with professional baseball teams, writers, students, and professors to build web applications.
             <ul>
-              <li>Built a CMS for San Francisco Giants affiliate team player management</li>
-              <li>Built tools to automate audio uploads for a blogger</li>
+              <li>Built a CMS for San Francisco Giants affiliate team player management.</li>
+              <li>Built tools to automate audio uploads for a blogger.</li>
             </ul>
           </li>
 
-          <li> Advised faculty and staff at the University of Scranton as a Technical Consultant
+          <li> Advised faculty and staff at the University of Scranton as a Technical Consultant.
             <ul>
-              <li>Migrated years of content from custom websites to a CMS</li>
-              <li>Created a proposal for which Learning Management System the University should use</li>
+              <li>Migrated years of content from custom websites to a CMS.</li>
+              <li>Created a proposal for which Learning Management System the University should use.</li>
             </ul>
           </li>
         </ul>
@@ -193,7 +193,7 @@ const JobList = () => (
             <li>
               <a href="http://efnback.droplet.joshuarogan.com/">
                 Application for a study at the University of Pittsburgh Medical
-                Center{" "}
+                Center{" "}.
               </a>
             </li>
           </ul>
