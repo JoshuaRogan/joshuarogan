@@ -4,6 +4,48 @@ const JobList = () => (
   <section>
       <h2>Work Experience</h2>
 
+    <section className="job">
+      <h3>
+        <a href="https://www.fandom.com/about">JW Player / Connatix</a>
+      </h3>
+      <h4>2023 - Present</h4>
+      <h4>Sr. Engineering Manager </h4>
+      <ul>
+        <li>
+          Currently manage a distributed team of 10 engineers across the US and Europe, spanning product engineering, UI, and client-side development. Together, we build and support JW Player’s Web and Mobile video players, which power billions of video plays each month.
+        </li>
+
+        <li>
+          Drove the technical integration of critical systems and teams during the JW Player–Connatix merger, aligning platforms and workflows across both organizations.
+          <ul>
+            <li>Developed an LLM-powered SlackBot to help employees across the newly merged company identify the right person to contact for questions and domain knowledge.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          Designed and implemented a company-wide engineering calibration cycle to standardize leveling expectations, drive transparent assessments, and support talent development across the org.
+        </li>
+
+        <li>
+          Worked cross-functionally with product leaders to deliver on immediate objectives, while coordinating with the VP of Engineering & CTO to lay the groundwork for sustainable platform growth.
+        </li>
+
+        <li>
+          Served as technical lead on multiple high-impact projects, including the Strategy Rules product—a rules engine UI designed to optimize video engagement and monetization.
+        </li>
+
+        <li>
+          Hired top-tier engineers globally and actively coached high performers into leadership roles. Delivered tailored mentorship to support both personal motivation and business-aligned growth paths.
+        </li>
+
+        <li>
+          Built strong technical relationships with Dotdash Meredith, AP, and the New York Post to support integrations and resolve issues quickly.
+        </li>
+      </ul>
+    </section>
+
+
       <section className="job">
         <h3>
           <a href="https://www.fandom.com/about">Fandom</a>
@@ -172,15 +214,15 @@ const JobList = () => (
         <h3>Independent Consultant | Full Stack Software Engineer</h3>
         <h4>January 2010 – Present</h4>
         <ul>
-          <li>(2023) Actively working with Howard Hughes Medical Institute building tools for expanding understanding of genetics.</li>
-          <li> Worked with professional baseball teams, writers, students, and professors to build web applications.
+          <li>(2024) Worked with Howard Hughes Medical Institute building tools for expanding <a href="https://media.hhmi.org/biointeractive/click/population-genetics-explorer/index" target="_blank">understanding of genetics</a>.</li>
+          <li> (2014-2019) Worked with professional baseball teams, writers, students, and professors to build web applications.
             <ul>
               <li>Built a CMS for San Francisco Giants affiliate team player management.</li>
               <li>Built tools to automate audio uploads for a blogger.</li>
             </ul>
           </li>
 
-          <li> Advised faculty and staff at the University of Scranton as a Technical Consultant.
+          <li> (2013) Advised faculty and staff at the University of Scranton as a Technical Consultant.
             <ul>
               <li>Migrated years of content from custom websites to a CMS.</li>
               <li>Created a proposal for which Learning Management System the University should use.</li>

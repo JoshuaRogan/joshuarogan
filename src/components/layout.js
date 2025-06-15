@@ -38,10 +38,13 @@ const Layout = ({ children }) => (
             <div className="image" />
             <h1>Hello World!</h1>
             <p>
-              I most recently worked as an engineering manager at Fandom in San
-              Francisco/Remote. At Fandom, I helped support our massive platform
-              of over 300 million monthly unique visitors covering 400K fan
-              powered communities.
+              Senior engineering leader with over a decade of experience scaling
+              UX Engineering organizations, building high-impact frontend and
+              design infrastructure, and leading distributed teams across web
+              and mobile platforms. Proven track record of bridging design and
+              engineering through platform thinking, performance-driven
+              development, and strong mentorship to deliver cohesive,
+              user-centered experiences at scale.
             </p>
             <p>
               You can reach me at{" "}
