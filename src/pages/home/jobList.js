@@ -6,7 +6,7 @@ const JobList = () => (
 
     <section className="job">
       <h3>
-        <a href="https://www.fandom.com/about">JW Player / Connatix</a>
+        <a href="https://jwpconnatix.com/" target="_blank">JW Player / Connatix</a>
       </h3>
       <h4>2023 - Present</h4>
       <h4>Sr. Engineering Manager </h4>
