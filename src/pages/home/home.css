@@ -23,13 +23,14 @@ section.nav {
 
 
 .image {
-    background: url(https://i.imgur.com/cGFtvF2.jpg);
+    background: url(https://i.imgur.com/vJ2pb5m.jpeg);
     height: 20vw;
     width: 20vw;
     margin-left: auto;
     margin-right: auto;
     background-size: cover;
     background-position: right top;
+    background-position-y: center;
     border-radius: 20vw;
     background-repeat: no-repeat;
     border: 3px solid #2c3e50;
