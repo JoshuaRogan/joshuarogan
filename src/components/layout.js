@@ -70,7 +70,7 @@ const Layout = ({ children }) => (
                 {" "}
                 Github
               </a>
-              <a href="https://goo.gl/photos/cxYAM6NLKC78Upky5" target="_blank">
+              <a href="https://photo.joshuarogan.com/" target="_blank">
                 Photography
               </a>
             </section>
