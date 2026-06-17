@@ -1,38 +1,13 @@
 {
-  "name": "joshuarogan-blog",
+  "name": "joshuarogan",
   "private": true,
-  "description": "Gatsby built blog for Josh Rogan",
-  "version": "0.1.0",
-  "author": "Josh Rogan <jjjr1122@gmail.com>",
-  "dependencies": {
-    "gatsby": "^3.14.0",
-    "gatsby-image": "^3.11.0",
-    "gatsby-plugin-manifest": "^3.14.0",
-    "gatsby-plugin-offline": "^4.14.0",
-    "gatsby-plugin-react-helmet": "^4.14.0",
-    "gatsby-plugin-sharp": "^3.14.0",
-    "gatsby-source-filesystem": "^3.14.0",
-    "gatsby-transformer-sharp": "^3.14.0",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.1"
-  },
-  "devDependencies": {
-    "prettier": "^2.4.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
+  "description": "Joshua Rogan's personal website — a single static page.",
+  "version": "1.0.0",
+  "author": "Josh Rogan <JoshJRogan@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.js",
-    "start": "yarn run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "start": "npx --yes serve .",
+    "dev": "npx --yes serve ."
   },
   "repository": {
     "type": "git",

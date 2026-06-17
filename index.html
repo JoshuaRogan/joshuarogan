@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Mark JS as available before paint so reveal-on-scroll can hide content.
+       Without JS, the .js class is never added and everything renders visible. -->
+  <script>document.documentElement.className += " js";</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshua Rogan — Engineering Leader & Builder</title>
+  <meta name="description" content="Joshua Rogan is a senior engineering leader scaling UX engineering teams — and a relentless side-project builder of baseball analytics, games, and tools for his family." />
+
+  <!-- Open Graph / social -->
+  <meta property="og:title" content="Joshua Rogan — Engineering Leader & Builder" />
+  <meta property="og:description" content="Senior engineering leader and prolific side-project builder. Baseball analytics, kids' games, and tools made with care." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://i.imgur.com/vJ2pb5m.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@JoshuaRogan" />
+
+  <!-- Favicon: a little baseball -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23FBF8F1' stroke='%231a1714' stroke-width='3'/%3E%3Cpath d='M28 14 C40 32 40 68 28 86' fill='none' stroke='%23b4321e' stroke-width='3'/%3E%3Cpath d='M72 14 C60 32 60 68 72 86' fill='none' stroke='%23b4321e' stroke-width='3'/%3E%3C/svg%3E" />
+
+  <!-- Fonts: Fraunces (editorial display) + Hanken Grotesk (clean body/UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --paper:      #FBF8F1;
+      --paper-2:    #F4EFE3;
+      --ink:        #1A1714;
+      --ink-soft:   #4A443C;
+      --ink-faint:  #8A8174;
+      --line:       #D9D0BE;
+      --accent:     #B4321E; /* baseball-stitch vermillion */
+      --accent-dk:  #8A2415;
+      --display: "Fraunces", Georgia, serif;
+      --body:    "Hanken Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+      --maxw: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      /* subtle paper grain */
+      background-image:
+        radial-gradient(circle at 18% 12%, rgba(180,50,30,0.05), transparent 42%),
+        radial-gradient(circle at 88% 0%,  rgba(26,23,20,0.04),  transparent 38%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 18px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-dk); }
+
+    h1, h2, h3 { font-family: var(--display); font-weight: 500; line-height: 1.04; margin: 0; }
+
+    ::selection { background: var(--accent); color: var(--paper); }
+
+    /* ---------------- Masthead ---------------- */
+    .masthead {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(251,248,241,0.82);
+      backdrop-filter: saturate(1.2) blur(10px);
+      -webkit-backdrop-filter: saturate(1.2) blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .masthead .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 14px; padding-bottom: 14px; gap: 18px;
+    }
+    .brand {
+      font-family: var(--display); font-weight: 600; font-size: 1.18rem;
+      letter-spacing: 0.01em; color: var(--ink); white-space: nowrap;
+    }
+    .brand .dot { color: var(--accent); }
+    .topnav { display: flex; gap: 26px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+    .topnav a {
+      font-family: var(--body); font-size: 0.74rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-soft);
+      position: relative; padding: 4px 0;
+    }
+    .topnav a::after {
+      content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
+      background: var(--accent); transition: width 0.25s ease;
+    }
+    .topnav a:hover { color: var(--ink); }
+    .topnav a:hover::after { width: 100%; }
+    .topnav a.cta { color: var(--accent); }
+    @media (max-width: 760px) { .topnav .hide-sm { display: none; } }
+
+    /* ---------------- Hero ---------------- */
+    .hero { padding: 78px 0 64px; border-bottom: 1px solid var(--line); }
+    .edition {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.2em;
+      color: var(--ink-faint); font-weight: 600; margin-bottom: 30px;
+    }
+    .edition .rule { flex: 1; height: 1px; background: var(--line); }
+
+    .hero-grid { display: grid; grid-template-columns: 1.55fr 0.9fr; gap: 56px; align-items: center; }
+    .hero h1 {
+      font-size: clamp(1.95rem, 7.2vw, 5.4rem);
+      letter-spacing: -0.02em; font-optical-sizing: auto;
+    }
+    .hero h1 .em { font-style: italic; color: var(--accent); }
+    .hero .lede {
+      margin-top: 26px; font-size: 1.16rem; max-width: 36ch; color: var(--ink-soft);
+      font-family: var(--body);
+    }
+    .hero .kicker {
+      font-family: var(--body); font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.18em; color: var(--accent);
+      margin-bottom: 18px;
+    }
+    .meta-row { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; }
+    .meta-row a.email { font-family: var(--display); font-style: italic; font-size: 1.15rem; }
+    .pills { display: flex; gap: 10px; flex-wrap: wrap; }
+    .pill {
+      font-family: var(--body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink-soft);
+      border: 1px solid var(--line); border-radius: 100px; padding: 7px 14px;
+      background: var(--paper); transition: all 0.2s ease;
+    }
+    .pill:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    .portrait-frame { position: relative; justify-self: center; }
+    .portrait-frame::before {
+      content: ""; position: absolute; inset: 14px -14px -14px 14px;
+      border: 1px solid var(--accent); border-radius: 6px; z-index: 0;
+    }
+    .portrait {
+      position: relative; z-index: 1; width: min(340px, 70vw); aspect-ratio: 4/5;
+      object-fit: cover; border-radius: 6px; display: block;
+      filter: grayscale(0.18) contrast(1.02);
+      box-shadow: 0 24px 60px -28px rgba(26,23,20,0.5);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .portrait-frame { order: -1; justify-self: start; }
+    }
+
+    /* ---------------- Section frame ---------------- */
+    section.block { padding: 80px 0; border-bottom: 1px solid var(--line); }
+    .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 14px; }
+    .section-head .no {
+      font-family: var(--body); font-size: 0.74rem; font-weight: 700;
+      letter-spacing: 0.16em; color: var(--accent);
+    }
+    .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); letter-spacing: -0.015em; }
+    .section-intro { color: var(--ink-soft); max-width: 60ch; margin: 0 0 48px; font-size: 1.05rem; }
+
+    /* ---------------- Projects ---------------- */
+    .project {
+      display: grid; grid-template-columns: 200px 1fr; gap: 40px;
+      padding: 44px 0; border-top: 1px solid var(--line);
+    }
+    .js .project { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .project.in { opacity: 1; transform: none; }
+    .project:first-of-type { border-top: none; }
+    .project-rail { position: relative; }
+    .project-rail .idx {
+      font-family: var(--display); font-size: 3.4rem; font-weight: 300;
+      line-height: 1; color: var(--ink); display: block;
+    }
+    .project:hover .project-rail .idx { color: var(--accent); }
+    .project-rail .idx .x { color: var(--accent); }
+    .project-rail .tags { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      font-family: var(--body); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--ink-faint);
+      border: 1px solid var(--line); border-radius: 4px; padding: 4px 9px;
+    }
+
+    .project-body h3 {
+      font-size: clamp(1.7rem, 3vw, 2.3rem); letter-spacing: -0.01em;
+      display: inline-flex; align-items: baseline; gap: 12px;
+    }
+    .project-body h3 a { color: var(--ink); transition: color 0.2s ease; }
+    .project-body h3 a:hover { color: var(--accent); }
+    .project-body h3 .arrow {
+      font-family: var(--body); font-size: 1.1rem; color: var(--accent);
+      transition: transform 0.25s ease; display: inline-block;
+    }
+    .project:hover .project-body h3 .arrow { transform: translate(4px, -4px); }
+    .project-body .tagline {
+      font-family: var(--display); font-style: italic; font-size: 1.22rem;
+      color: var(--accent-dk); margin: 8px 0 16px;
+    }
+    .project-body p { margin: 0 0 14px; color: var(--ink-soft); max-width: 62ch; }
+    .project-body .visit {
+      font-family: var(--body); font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      display: inline-flex; align-items: center; gap: 7px; margin-top: 4px;
+    }
+    .project-body .visit::after { content: "↗"; }
+
+    @media (max-width: 720px) {
+      .project { grid-template-columns: 1fr; gap: 18px; padding: 36px 0; }
+      .project-rail { display: flex; align-items: center; gap: 18px; }
+      .project-rail .tags { margin-top: 0; }
+      .project-rail .idx { font-size: 2.4rem; }
+    }
+
+    /* ---------------- Work ---------------- */
+    .job { display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 36px 0; border-top: 1px solid var(--line); }
+    .job:first-of-type { border-top: none; }
+    .job-meta .company { font-family: var(--display); font-size: 1.4rem; font-weight: 500; line-height: 1.1; }
+    .job-meta .company a { color: var(--ink); }
+    .job-meta .company a:hover { color: var(--accent); }
+    .job-meta .dates {
+      font-family: var(--body); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ink-faint); margin-top: 8px;
+    }
+    .role-title {
+      font-family: var(--body); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--accent); margin: 22px 0 8px;
+    }
+    .role-title:first-child { margin-top: 0; }
+    .job ul { margin: 0 0 4px; padding-left: 20px; }
+    .job li { margin-bottom: 9px; color: var(--ink-soft); }
+    .job li ul { margin-top: 9px; }
+    .links-inline { margin-top: 14px; font-size: 0.92rem; }
+    .links-inline .lbl {
+      font-family: var(--body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--ink-faint); display: block; margin-bottom: 6px;
+    }
+    .links-inline a { margin-right: 16px; line-height: 2; }
+    @media (max-width: 720px) { .job { grid-template-columns: 1fr; gap: 14px; padding: 30px 0; } }
+
+    /* ---------------- Skills ---------------- */
+    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 56px; }
+    .skill { display: grid; grid-template-columns: 150px 1fr; gap: 22px; padding: 20px 0; border-top: 1px solid var(--line); }
+    .skill .cat {
+      font-family: var(--body); font-weight: 700; font-size: 0.74rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); padding-top: 3px;
+    }
+    .skill .list { color: var(--ink-soft); font-size: 0.96rem; }
+    @media (max-width: 860px) { .skills-grid { grid-template-columns: 1fr; gap: 0; } }
+    @media (max-width: 480px) { .skill { grid-template-columns: 1fr; gap: 4px; } }
+
+    /* ---------------- Footer ---------------- */
+    footer { padding: 64px 0 56px; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
+    footer .big {
+      font-family: var(--display); font-size: clamp(2rem, 5vw, 3.4rem);
+      letter-spacing: -0.02em; line-height: 1;
+    }
+    footer .big a { color: var(--ink); }
+    footer .big a:hover { color: var(--accent); }
+    .footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .footer-links a {
+      font-family: var(--body); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--ink-soft);
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .colophon { margin-top: 38px; font-size: 0.78rem; color: var(--ink-faint); }
+
+    /* reveal helper for sections — only hidden when JS is present, so the page
+       still shows everything if JavaScript is disabled or fails to load. */
+    .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* staggered hero load */
+    @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+    .hero .anim { opacity: 0; animation: rise 0.8s cubic-bezier(.2,.7,.3,1) forwards; }
+    .hero .d1 { animation-delay: 0.05s; }
+    .hero .d2 { animation-delay: 0.18s; }
+    .hero .d3 { animation-delay: 0.31s; }
+    .hero .d4 { animation-delay: 0.44s; }
+    .hero .d5 { animation-delay: 0.57s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      .project, .reveal { opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ MASTHEAD ============ -->
+  <header class="masthead">
+    <div class="wrap">
+      <span class="brand">Joshua Rogan<span class="dot">.</span></span>
+      <nav class="topnav">
+        <a href="#projects">Projects</a>
+        <a href="#work" class="hide-sm">Work</a>
+        <a href="#skills" class="hide-sm">Skills</a>
+        <a href="https://github.com/JoshuaRogan" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/joshuarogan/" target="_blank" rel="noopener" class="hide-sm">LinkedIn</a>
+        <a href="https://drive.google.com/file/d/1E99WYmrNF3zP4ndvSeS_2SHVw5kzG0Gd/view" target="_blank" rel="noopener" class="cta">Résumé</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="edition anim d1">
+        <span>Personal Portfolio</span>
+        <span class="rule"></span>
+        <span>Engineering &amp; Side Projects</span>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <p class="kicker anim d2">Senior Engineering Manager · JW Player / Connatix</p>
+          <h1 class="anim d2">Building teams,<br />and <span class="em">building things</span> for the people I love.</h1>
+          <p class="lede anim d3">
+            Senior engineering leader with over a decade of experience scaling UX engineering
+            organizations, building high-impact frontend and design infrastructure, and leading
+            distributed teams across web and mobile. Off the clock, I build baseball analytics,
+            ad-free games for kids, and tools for my family.
+          </p>
+          <div class="meta-row anim d4">
+            <a class="email" href="mailto:JoshJRogan@gmail.com">JoshJRogan@gmail.com</a>
+          </div>
+          <div class="meta-row anim d5">
+            <div class="pills">
+              <a class="pill" href="#projects">Projects</a>
+              <a class="pill" href="https://www.linkedin.com/in/joshuarogan/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="pill" href="https://github.com/JoshuaRogan" target="_blank" rel="noopener">GitHub</a>
+              <a class="pill" href="https://photo.joshuarogan.com/" target="_blank" rel="noopener">Photography</a>
+            </div>
+          </div>
+        </div>
+        <div class="portrait-frame anim d3">
+          <img class="portrait" src="https://i.imgur.com/vJ2pb5m.jpeg" alt="Joshua Rogan" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="no">01 / Selected Work</span>
+      </div>
+      <h2 class="section-head reveal" style="display:block; font-size:clamp(2.2rem,5vw,3.4rem); margin-bottom:18px;">Things I&rsquo;ve built for fun.</h2>
+      <p class="section-intro reveal">
+        A running collection of side projects — most of them born from a love of baseball, a soft spot
+        for teaching kids, or the simple urge to make something useful for my family. All designed,
+        built, and shipped by me.
+      </p>
+
+      <!-- 01 Dingers -->
+      <article class="project">
+        <div class="project-rail">
+          <span class="idx">0<span class="x">1</span></span>
+          <div class="tags">
+            <span class="tag">Official MLB API</span>
+            <span class="tag">LLMs / AI</span>
+            <span class="tag">Fantasy</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3><a href="https://dingers-mlb.netlify.app/" target="_blank" rel="noopener">Dingers — MLB Fantasy League <span class="arrow">↗</span></a></h3>
+          <p class="tagline">A fantasy baseball league with a brain of its own.</p>
+          <p>
+            A completely custom-built fantasy league for a tight-knit group of friends — no off-the-shelf
+            platform, every rule and scoring wrinkle built from scratch. It pulls live data straight from
+            the <strong>official MLB APIs</strong>, so standings, box scores, and player stats update with
+            the real season.
+          </p>
+          <p>
+            What makes it different: <strong>advanced AI and LLMs</strong> power the personality of the
+            league — generating matchup previews, weekly recaps, playful trash talk, and narrative
+            storylines on top of a deep layer of detailed, sabermetric-flavored stats. It turns a spreadsheet
+            of numbers into a living, fun environment that feels like its own little corner of the baseball internet.
+          </p>
+          <a class="visit" href="https://dingers-mlb.netlify.app/" target="_blank" rel="noopener">Visit Dingers</a>
+        </div>
+      </article>
+
+      <!-- 02 Power Rankings -->
+      <article class="project">
+        <div class="project-rail">
+          <span class="idx">0<span class="x">2</span></span>
+          <div class="tags">
+            <span class="tag">Elo Ratings</span>
+            <span class="tag">Monte Carlo</span>
+            <span class="tag">Predictive Modeling</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3><a href="http://mlb.joshuarogan.com/" target="_blank" rel="noopener">MLB Power Rankings &amp; Predictions <span class="arrow">↗</span></a></h3>
+          <p class="tagline">FiveThirtyEight&rsquo;s playbook, rebuilt for every MLB team.</p>
+          <p>
+            A standings-prediction engine modeled on the classic <strong>538 / FiveThirtyEight methodology</strong>.
+            Each team carries a dynamic <strong>Elo power rating</strong> that rises and falls game-by-game based on
+            opponent strength, margin, and home-field — a single number that captures who&rsquo;s actually good right now,
+            not just who got lucky.
+          </p>
+          <p>
+            From there it runs <strong>thousands of Monte Carlo simulations</strong> of the rest of the season to produce
+            projected win totals, division-title odds, wild-card chances, and full playoff probabilities. The result is a
+            data-driven, constantly updating crystal ball for the entire league — the kind of analytical rigor front
+            offices pay for, built as a labor of love.
+          </p>
+          <a class="visit" href="http://mlb.joshuarogan.com/" target="_blank" rel="noopener">View the rankings</a>
+        </div>
+      </article>
+
+      <!-- 03 Stocks for Kids -->
+      <article class="project">
+        <div class="project-rail">
+          <span class="idx">0<span class="x">3</span></span>
+          <div class="tags">
+            <span class="tag">Finance Data</span>
+            <span class="tag">Education</span>
+            <span class="tag">Data Viz</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3><a href="https://stocks.joshuarogan.com/" target="_blank" rel="noopener">Stocks for Kids <span class="arrow">↗</span></a></h3>
+          <p class="tagline">Gifting investments — and a head start on financial literacy.</p>
+          <p>
+            When I give stock to the kids in my family as a gift, this is how we track it. <strong>Stocks for Kids</strong>
+            turns each gift into a simple, friendly dashboard where a child can watch the value of <em>their</em> shares grow
+            over time, see how the market moves, and start to understand compounding and ownership long before a finance class
+            ever gets to them.
+          </p>
+          <p>
+            It pulls real market pricing to keep portfolios current and presents it in language and visuals a kid can actually
+            follow — making an abstract concept feel personal, tangible, and a little bit magical every time the number ticks up.
+          </p>
+          <a class="visit" href="https://stocks.joshuarogan.com/" target="_blank" rel="noopener">See how it works</a>
+        </div>
+      </article>
+
+      <!-- 04 Geo -->
+      <article class="project">
+        <div class="project-rail">
+          <span class="idx">0<span class="x">4</span></span>
+          <div class="tags">
+            <span class="tag">Geography</span>
+            <span class="tag">Kid-Safe</span>
+            <span class="tag">No Ads</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3><a href="https://geo.joshuarogan.com/" target="_blank" rel="noopener">Geo — A Geography Game for Kids <span class="arrow">↗</span></a></h3>
+          <p class="tagline">Learn the world and the 50 states. No ads, ever.</p>
+          <p>
+            An interactive geography game built so kids can learn world and U.S. geography through play — locating countries,
+            capitals, and states in a clean, encouraging interface. It&rsquo;s designed to reward curiosity and make memorization
+            feel like a game instead of a quiz.
+          </p>
+          <p>
+            Most importantly, it&rsquo;s <strong>completely free of ads and tracking</strong>. I built it because I wanted my own
+            kids and family to have a safe, distraction-free place to learn — no pop-ups, no upsells, no creepy data collection.
+            Just geography.
+          </p>
+          <a class="visit" href="https://geo.joshuarogan.com/" target="_blank" rel="noopener">Play Geo</a>
+        </div>
+      </article>
+
+      <!-- 05 Force Projection -->
+      <article class="project">
+        <div class="project-rail">
+          <span class="idx">0<span class="x">5</span></span>
+          <div class="tags">
+            <span class="tag">Multiplayer</span>
+            <span class="tag">Strategy</span>
+            <span class="tag">Online Board Game</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3><a href="https://force-projection.vercel.app/" target="_blank" rel="noopener">Force Projection <span class="arrow">↗</span></a></h3>
+          <p class="tagline">A full strategy board game you can play online with friends.</p>
+          <p>
+            <strong>Force Projection</strong> is a complete, detailed online board game — built from the ground up to play with
+            friends across the table or across the country. It captures the depth of a real strategy game: managing resources,
+            positioning, and outmaneuvering opponents turn after turn.
+          </p>
+          <p>
+            Everything — the rules engine, the board state, the turn flow, and the online play — is custom-built, the product of a
+            genuine love for tabletop game design translated into the browser.
+          </p>
+          <a class="visit" href="https://force-projection.vercel.app/" target="_blank" rel="noopener">Play Force Projection</a>
+        </div>
+      </article>
+
+      <!-- 06 Photography -->
+      <article class="project">
+        <div class="project-rail">
+          <span class="idx">0<span class="x">6</span></span>
+          <div class="tags">
+            <span class="tag">Photography</span>
+            <span class="tag">Small Business</span>
+            <span class="tag">Portfolio</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <h3><a href="http://photo.joshuarogan.com/" target="_blank" rel="noopener">Rogan Photography <span class="arrow">↗</span></a></h3>
+          <p class="tagline">The side of me that lives behind the lens.</p>
+          <p>
+            The home for my personal photography business — a curated portfolio of the work I shoot on the side. Photography is one
+            of my favorite ways to slow down and pay attention, and this site is where that work lives and where clients can find me.
+          </p>
+          <p>
+            From editing in Lightroom to building the site itself, it&rsquo;s a fully self-run little business and creative outlet.
+          </p>
+          <a class="visit" href="http://photo.joshuarogan.com/" target="_blank" rel="noopener">View the gallery</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="no">02 / Career</span>
+      </div>
+      <h2 class="section-head reveal" style="display:block; font-size:clamp(2.2rem,5vw,3.4rem); margin-bottom:18px;">Work experience.</h2>
+      <p class="section-intro reveal">
+        A decade-plus building and leading engineering teams — from full-stack consulting to managing
+        distributed organizations behind products used by hundreds of millions of people.
+      </p>
+
+      <!-- JW Player / Connatix -->
+      <div class="job reveal">
+        <div class="job-meta">
+          <div class="company"><a href="https://jwpconnatix.com/" target="_blank" rel="noopener">JW Player / Connatix</a></div>
+          <div class="dates">2023 — Present</div>
+        </div>
+        <div>
+          <div class="role-title">Sr. Engineering Manager</div>
+          <ul>
+            <li>Manage a distributed team of 10 engineers across the US and Europe — spanning product engineering, UI, and client-side development — building and supporting JW Player&rsquo;s Web and Mobile video players, which power billions of video plays each month.</li>
+            <li>Drove the technical integration of critical systems and teams during the JW Player–Connatix merger, aligning platforms and workflows across both organizations.
+              <ul><li>Developed an LLM-powered SlackBot to help employees across the newly merged company identify the right person to contact for questions and domain knowledge.</li></ul>
+            </li>
+            <li>Designed and implemented a company-wide engineering calibration cycle to standardize leveling expectations, drive transparent assessments, and support talent development across the org.</li>
+            <li>Worked cross-functionally with product leaders on immediate objectives while coordinating with the VP of Engineering &amp; CTO to lay the groundwork for sustainable platform growth.</li>
+            <li>Served as technical lead on multiple high-impact projects, including the Strategy Rules product — a rules-engine UI designed to optimize video engagement and monetization.</li>
+            <li>Hired top-tier engineers globally and coached high performers into leadership roles with tailored mentorship.</li>
+            <li>Built strong technical relationships with Dotdash Meredith, AP, and the New York Post to support integrations and resolve issues quickly.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Fandom -->
+      <div class="job reveal">
+        <div class="job-meta">
+          <div class="company"><a href="https://www.fandom.com/about" target="_blank" rel="noopener">Fandom</a></div>
+          <div class="dates">Jul 2016 — 2023</div>
+        </div>
+        <div>
+          <div class="role-title">Engineering Manager · 2019–2023</div>
+          <ul>
+            <li>Led complex projects across scalable React front-end applications, data systems, and back-end microservices serving 300M monthly unique visitors.</li>
+            <li>Expanded strategy for performance dashboards and observability on client-side systems.</li>
+            <li>Led a team of 9 engineers focusing on findability, video, and experimentation — delivering high-quality features rapidly against business objectives.</li>
+            <li>Partnered with product leaders on short-term goals while working with the VP of Engineering to build infrastructure for the long term.</li>
+            <li>Executed a strategy to unify the front-end platform with consistent tooling and technology, and hired global talent across multiple departments.</li>
+          </ul>
+          <div class="role-title">Staff Engineer · 2016–2019</div>
+          <ul>
+            <li>Technical lead for a browser experimentation platform, a client-side data-management toolkit for personalization, and the video platform.</li>
+            <li>Built a fast-to-market editorial platform and Fandom&rsquo;s React replacement of MediaWiki.</li>
+            <li>Unified client-side performance and analytics systems and led code-sharing groups for new technology and engineering patterns.</li>
+          </ul>
+          <div class="links-inline">
+            <span class="lbl">Shipped</span>
+            <a href="https://www.fandom.com/fancentral/home" target="_blank" rel="noopener">Centralized Content App (2023)</a>
+            <a href="https://www.fandom.com/video" target="_blank" rel="noopener">Canonical Video Platform (2022)</a>
+            <a href="https://www.fandom.com/trivia" target="_blank" rel="noopener">Trivia App (2022)</a>
+            <a href="https://bingebot.fandom.com/" target="_blank" rel="noopener">TV Recommendation App (2021)</a>
+            <a href="https://www.fandom.com/" target="_blank" rel="noopener">Editorial Platform (2020)</a>
+            <a href="https://starwars.fandom.com/wiki/Luke_Skywalker" target="_blank" rel="noopener">MediaWiki Platform</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fireman Creative -->
+      <div class="job reveal">
+        <div class="job-meta">
+          <div class="company">Fireman Creative</div>
+          <div class="dates">Jul 2015 — Jul 2016</div>
+        </div>
+        <div>
+          <div class="role-title">Full Stack Software Engineer</div>
+          <ul>
+            <li>Independently led several web projects from design to production, collaborating with clients and designers on a consistent look and feel.</li>
+            <li>Generated monthly SEO and analytics reports, and created a new container-based deployment process that greatly sped up development flows.</li>
+            <li>Implemented automated alerts and scripts to restart crashed applications and servers.</li>
+          </ul>
+          <div class="links-inline">
+            <span class="lbl">Projects</span>
+            <a href="https://ae7.com/" target="_blank" rel="noopener">AE7</a>
+            <a href="https://jccpgh.org/" target="_blank" rel="noopener">JCC Pittsburgh</a>
+            <a href="http://contedesign.net/" target="_blank" rel="noopener">Conte Design</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PQR -->
+      <div class="job reveal">
+        <div class="job-meta">
+          <div class="company">Pittsburgh Quantum Repository Group</div>
+          <div class="dates">Jan 2015 — Jan 2016</div>
+        </div>
+        <div>
+          <div class="role-title">Full Stack Software Engineer</div>
+          <ul>
+            <li>Built a Python-powered front-end application to display the largest molecule database, using WebGL for 3D molecule visualizations.</li>
+            <li>Built and maintained a MongoDB server.</li>
+          </ul>
+          <div class="links-inline">
+            <span class="lbl">Links</span>
+            <a href="https://pqr.pitt.edu/mol/XLYOFNOQVPJJNP-UHFFFAOYSA-N" target="_blank" rel="noopener">Database App</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pittsburgh Genetics -->
+      <div class="job reveal">
+        <div class="job-meta">
+          <div class="company">Pittsburgh Genetics</div>
+          <div class="dates">Oct 2014 — Jan 2016</div>
+        </div>
+        <div>
+          <div class="role-title">Full Stack Software Engineer</div>
+          <ul>
+            <li>Built a genetic population simulator web application used by students and professors across the US.
+              <ul>
+                <li>Teaching tool adopted across multiple universities.</li>
+                <li>Used multithreaded web workers to speed up simultaneous math calculations.</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="links-inline">
+            <span class="lbl">Links</span>
+            <a href="https://eloquent-williams-76e898.netlify.app/" target="_blank" rel="noopener">Population Simulator</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Independent Consultant -->
+      <div class="job reveal">
+        <div class="job-meta">
+          <div class="company">Independent Consultant</div>
+          <div class="dates">Jan 2010 — Present</div>
+        </div>
+        <div>
+          <div class="role-title">Full Stack Software Engineer</div>
+          <ul>
+            <li>(2024) Worked with the Howard Hughes Medical Institute building tools for <a href="https://media.hhmi.org/biointeractive/click/population-genetics-explorer/index" target="_blank" rel="noopener">expanding the understanding of genetics</a>.</li>
+            <li>(2014–2019) Worked with professional baseball teams, writers, students, and professors to build web applications.
+              <ul>
+                <li>Built a CMS for San Francisco Giants affiliate team player management.</li>
+                <li>Built tools to automate audio uploads for a blogger.</li>
+              </ul>
+            </li>
+            <li>(2013) Advised faculty and staff at the University of Scranton as a technical consultant — migrating years of content to a CMS and proposing a Learning Management System.</li>
+          </ul>
+          <div class="links-inline">
+            <span class="lbl">Links</span>
+            <a href="http://efnback.droplet.joshuarogan.com/" target="_blank" rel="noopener">UPMC Study Application</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="block" id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="no">03 / Toolbox</span>
+      </div>
+      <h2 class="section-head reveal" style="display:block; font-size:clamp(2.2rem,5vw,3.4rem); margin-bottom:18px;">Skill sets.</h2>
+      <p class="section-intro reveal">
+        The tech I reach for across the stack — from frontend and infrastructure to data engineering,
+        analytics, and design.
+      </p>
+
+      <div class="skills-grid reveal">
+        <div class="skill">
+          <div class="cat">Frontend</div>
+          <div class="list">JavaScript, TypeScript, React, Next.js, Redux, Webpack, Rollup, Immutable, Styled Components, Yarn, IndexedDB, LocalStorage, streaming video, WebGL, Web Workers.</div>
+        </div>
+        <div class="skill">
+          <div class="cat">Backend</div>
+          <div class="list">Node.js, Java (Gradle, Guice, Jackson, Jersey, Jooq, Liquibase), Python, PHP (Laravel, Composer, WP), RabbitMQ, Memcached, Algolia.</div>
+        </div>
+        <div class="skill">
+          <div class="cat">Data / DB</div>
+          <div class="list">MySQL, MongoDB, GraphQL, Neo4J.</div>
+        </div>
+        <div class="skill">
+          <div class="cat">Analytics</div>
+          <div class="list">Athena, Google Analytics, Mode, Qlik.</div>
+        </div>
+        <div class="skill">
+          <div class="cat">Ops</div>
+          <div class="list">Kubernetes, AWS, GCP, Jenkins, Travis CI, Kibana, Grafana, Prometheus, Varnish Control Language.</div>
+        </div>
+        <div class="skill">
+          <div class="cat">Data Eng / ML</div>
+          <div class="list">scikit-learn, TensorFlow, Pandas, Jupyter Notebook.</div>
+        </div>
+        <div class="skill">
+          <div class="cat">Design</div>
+          <div class="list">Figma, Zeplin, Sketch, Canva, LucidChart.</div>
+        </div>
+        <div class="skill">
+          <div class="cat">Misc</div>
+          <div class="list">Agile, Jira, Photoshop, Lightroom, Premiere Pro.</div>
+        </div>
+        <div class="skill">
+          <div class="cat">Off the Clock</div>
+          <div class="list">Photography, woodworking, board games, disc golf, and baseball.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="big">Let&rsquo;s talk.<br /><a href="mailto:JoshJRogan@gmail.com">JoshJRogan@gmail.com</a></div>
+        <div class="footer-links">
+          <a href="https://drive.google.com/file/d/1E99WYmrNF3zP4ndvSeS_2SHVw5kzG0Gd/view" target="_blank" rel="noopener">Résumé</a>
+          <a href="https://www.linkedin.com/in/joshuarogan/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/JoshuaRogan" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://photo.joshuarogan.com/" target="_blank" rel="noopener">Photography</a>
+        </div>
+      </div>
+      <p class="colophon">© <span id="year">2026</span> Joshua Rogan · Designed &amp; built by hand. Made between innings.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll-reveal for sections and projects
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+    document.querySelectorAll(".reveal, .project").forEach(function (el) { obs.observe(el); });
+  </script>
+</body>
+</html>
