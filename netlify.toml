@@ -1,4 +1,11 @@
 # Static single-page site — nothing to build, just publish the repo root.
 [build]
   publish = "."
-  command = ""
+  # No build step. A harmless no-op so Netlify doesn't fall back to a stale
+  # UI build command (e.g. the old `gatsby build`).
+  command = "echo 'static site — no build needed'"
+
+# Force a modern Node so Netlify's own extension tooling (esbuild postinstall)
+# can install. The build image otherwise defaulted to Node 8.
+[build.environment]
+  NODE_VERSION = "18"

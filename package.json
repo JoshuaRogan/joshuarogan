@@ -5,6 +5,9 @@
   "version": "1.0.0",
   "author": "Josh Rogan <JoshJRogan@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "npx --yes serve .",
     "dev": "npx --yes serve ."
