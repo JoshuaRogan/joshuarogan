@@ -253,6 +253,28 @@
     @media (max-width: 860px) { .skills-grid { grid-template-columns: 1fr; gap: 0; } }
     @media (max-width: 480px) { .skill { grid-template-columns: 1fr; gap: 4px; } }
 
+    /* AI usage callout */
+    .ai-note {
+      border: 1px solid var(--line); border-left: 4px solid var(--accent);
+      border-radius: 6px; background: var(--paper-2);
+      padding: 30px 34px; margin: 0 0 44px;
+    }
+    .ai-note .label {
+      font-family: var(--body); font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); margin-bottom: 14px;
+    }
+    .ai-note p {
+      font-family: var(--display); font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+      line-height: 1.35; color: var(--ink); margin: 0; max-width: 46ch;
+    }
+    .ai-note .providers { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .ai-note .providers .pill {
+      font-family: var(--body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink-soft);
+      border: 1px solid var(--line); border-radius: 100px; padding: 7px 14px; background: var(--paper);
+    }
+    @media (max-width: 480px) { .ai-note { padding: 24px 22px; } }
+
     /* ---------------- Footer ---------------- */
     footer { padding: 64px 0 56px; }
     .footer-grid { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
@@ -694,6 +716,21 @@
         analytics, and design.
       </p>
 
+      <div class="ai-note reveal">
+        <div class="label">Working with AI</div>
+        <p>
+          A heavy, hands-on API user across OpenAI, Google, Anthropic, and Grok — building with
+          whichever model fits the job, for everything from Discord engagement bots and custom
+          children&rsquo;s books for my niece and nephew to MLB-powered applications.
+        </p>
+        <div class="providers">
+          <span class="pill">OpenAI</span>
+          <span class="pill">Google Gemini</span>
+          <span class="pill">Anthropic</span>
+          <span class="pill">Grok (xAI)</span>
+        </div>
+      </div>
+
       <div class="skills-grid reveal">
         <div class="skill">
           <div class="cat">Frontend</div>
@@ -714,6 +751,10 @@
         <div class="skill">
           <div class="cat">Ops</div>
           <div class="list">Kubernetes, AWS, GCP, Jenkins, Travis CI, Kibana, Grafana, Prometheus, Varnish Control Language.</div>
+        </div>
+        <div class="skill">
+          <div class="cat">AI / LLMs</div>
+          <div class="list">OpenAI, Google Gemini, Anthropic Claude, Grok (xAI) APIs; prompt engineering, function/tool calling, RAG, embeddings, and agentic workflows — wired into Discord bots, generated children&rsquo;s books, and MLB apps.</div>
         </div>
         <div class="skill">
           <div class="cat">Data Eng / ML</div>
